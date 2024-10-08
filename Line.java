@@ -1,40 +1,37 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package testreadline;
+
 public class Line {
-    private StringBuilder line;
+    private StringBuilder text;
     private int cursorPosition;
 
     public Line() {
-        line = new StringBuilder();
-        cursorPosition = 0;
+        this.text = new StringBuilder();
+        this.cursorPosition = 0;
     }
 
-    public void insertChar(char ch) {
-        line.insert(cursorPosition, ch);
+    public void insertChar(char c) {
+        text.insert(cursorPosition, c);
         cursorPosition++;
     }
 
-    public void moveCursorLeft() {
-        if (cursorPosition > 0) cursorPosition--;
-    }
-
-    public void moveCursorRight() {
-        if (cursorPosition < line.length()) cursorPosition++;
-    }
-
     public void deleteChar() {
-        if (cursorPosition < line.length()) {
-            line.deleteCharAt(cursorPosition);
-        }
-    }
-
-    public void backspace() {
         if (cursorPosition > 0) {
-            line.deleteCharAt(cursorPosition - 1);
+            text.deleteCharAt(cursorPosition - 1);
             cursorPosition--;
         }
     }
 
-    @Override
-    public String toString() {
-        return line.toString();
+    public String getText() {
+        return text.toString();
     }
+
+    public int getCursorPosition() {
+        return cursorPosition;
+    }
+
+    // Otros métodos relacionados con la gestión de la línea y el cursor
 }
