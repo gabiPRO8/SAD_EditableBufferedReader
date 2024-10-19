@@ -1,0 +1,19 @@
+Per marcar caracters com [ cal escriure-ho de la sugüente manera //[
+Operador ? vol dir opcionalitata, exemple: [+-]? aixo ha d'esperar un + o un - o cap d'elles
+
+Exemple: [+-]?\\d*\\.?\\d+(?: [eE][+-]?\\d+)? <-- tot es opcional ja que te un ()?
+            el primer d+ vol dir que pot haver-hi un digit mes
+            \\.? vol dir: \\. es com el cortxet, per llegir el punt ha dhaver-hi dues barres, i ? es per no obligar a que hi hagi un punt, pot haver-hi o no
+            d+ vol dir com a minim un digit, d* vol dir que pot haver-hi una secuencia de digits
+            o e minuscula o E majuscula
+            signe + o - opcional ja que tenim el [+-]?
+LLavors l'exemple es: primer tenim un sgine mes o menys, o cap [+-]?
+Després tinderm una serie de caracters \\d*
+Despres podem o no llegir un punt \\.?
+Despres tenim com a minim un caracter mes \\d+
+El caracter extra potser o e o E o cap de les dues, o + o - o cap de les dues, tot es opcional
+y finalment pot haver hi mes caracters, ja que tenim el \\d+
+
+--> \\ Serviex per poder llegir caracters textuals
+--> [] serveix per marcar una serie de caracters que poden apareixer al String
+--> ? indica opcionalitat del que precedeix
