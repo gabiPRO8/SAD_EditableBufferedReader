@@ -1,4 +1,1 @@
-ESTA PENJAT:
-la P1 amb MVC
--SlideBar
-la P2
+Pràctica 1 Completa.
